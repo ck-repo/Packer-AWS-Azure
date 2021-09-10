@@ -136,24 +136,10 @@ build {
 
   provisioner "shell" {
     only = ["azure-arm.ubuntu"]
-    inline = ["sudo apt-get update","sudo apt-get install ansible -y"]
+    inline = ["sudo apt update, sudo apt install software-properties-common, sudo add-apt-repository --yes --update ppa:ansible/ansible, sudo apt install ansible -y"]
   }
 
   provisioner "ansible-local" {
     playbook_file   = "./ansible/httpd.yaml"
-  }
-
-
-#If youm want aws cli on AWS image and Azure cli on Azure image 
-
-  provisioner "shell" {
-    only = ["amazon-ebs.linux"]
-    inline = ["sudo yum install awscli"]
-  }
-
-
-  provisioner "shell" {
-    only = ["azure-arm.ubuntu"]
-    inline = ["sudo apt-get install azure-cli"]
   }
 }
