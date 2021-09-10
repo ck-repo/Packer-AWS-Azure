@@ -111,11 +111,11 @@ source "azure-arm" "ubuntu" {
   os_type         = "Linux"
   image_publisher = "Canonical"
   image_offer     = "UbuntuServer"
-  image_sku       = "20.04-LTS"
+  image_sku       = "18.04-LTS"
 
   azure_tags = {
     Created-by = "Packer"
-    OS_Version = "Ubuntu 20.04"
+    OS_Version = "Ubuntu 18.04"
     Release    = "Latest"
     Name = "Gold Image Test"
 }
