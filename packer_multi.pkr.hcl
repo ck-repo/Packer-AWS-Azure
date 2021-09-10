@@ -73,7 +73,7 @@ source "amazon-ebs" "linux" {
   subnet_id         = var.subnet
   vpc_id            = var.vpc
   tags = {
-      Name = "Lee"
+      Name = "Gold Image Test"
   }
 }
 
